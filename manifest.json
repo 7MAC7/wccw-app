@@ -1,0 +1,16 @@
+
+{
+  "short_name": "WCCW",
+  "name": "WCCW - 워싱턴 정신대대책위",
+  "icons": [
+    {
+      "src": "https://wccw.org/wp-content/uploads/2019/12/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#6B21A8",
+  "background_color": "#ffffff"
+}
