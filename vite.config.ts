@@ -10,14 +10,19 @@ export default defineConfig(({ mode }) => {
       'process.env.API_KEY': JSON.stringify(env.API_KEY || ''),
       'process.env.FIREBASE_API_KEY': JSON.stringify(env.FIREBASE_API_KEY || ''),
     },
+    server: {
+      port: 3000,
+    },
     build: {
       outDir: 'dist',
-      assetsDir: 'assets',
+      sourcemap: false,
       minify: 'terser',
       rollupOptions: {
         output: {
           manualChunks: {
-            vendor: ['react', 'react-dom', 'lucide-react'],
+            'vendor-react': ['react', 'react-dom'],
+            'vendor-utils': ['lucide-react', 'recharts'],
+            'vendor-firebase': ['firebase/app', 'firebase/firestore'],
           },
         },
       },

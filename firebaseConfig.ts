@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
-// Vercel 환경 변수(FIREBASE_API_KEY)를 우선 사용합니다.
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY || "AIzaSyBWc1Wz4mBz9OkI9zXfLgwnssIW42AQbsA",
   authDomain: "wccw-app.firebaseapp.com",
