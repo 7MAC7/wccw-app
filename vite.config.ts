@@ -6,26 +6,14 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
-    base: '/',
+    // process.env 대신 import.meta.env를 선호하지만 하위 호환성을 위해 유지
     define: {
       'process.env.API_KEY': JSON.stringify(env.API_KEY || ''),
       'process.env.FIREBASE_API_KEY': JSON.stringify(env.FIREBASE_API_KEY || ''),
     },
     build: {
       outDir: 'dist',
-      assetsDir: 'assets',
-      sourcemap: false,
-      chunkSizeWarningLimit: 1000,
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            vendor: ['react', 'react-dom'],
-            charts: ['recharts'],
-            genai: ['@google/genai'],
-            icons: ['lucide-react']
-          }
-        }
-      }
+      emptyOutDir: true
     }
   };
 });
