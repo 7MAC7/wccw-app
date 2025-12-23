@@ -23,8 +23,7 @@
     "terser": "^5.31.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0"
-  }
-}
+},
 "engines": {
   "node": ">=18.18.0"
 }
